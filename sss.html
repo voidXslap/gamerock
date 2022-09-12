@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+	<script>
+    /*we need to loop the whole thing 5 times so we are doing just that */
+    for(let i = 0; i<5; i++ ){
+/*get a function to do that too :
+we make a function that will get the computer to return one of the three */
+function getComputerChoice(){
+/* inside the function we get a method that will randomise the choices we give it */
+  
+  var list = ["rock", 'paper', 'scissors']
+  var randonstring = list[Math.floor(Math.random()*list.length)]
+  return randonstring
+}
+let computer = getComputerChoice()
+
+/* ask user for input rock paper or scissors */
+
+askForinput = prompt("rock , paper, scissors ?")
+
+/*now we turn the input in lower case*/
+function toLowerInput(){
+  return askForinput.toLowerCase();
+}
+let guest = toLowerInput()
+/* after getting user input and computer input we now have to make if statements*/
+function decide_winer(guest , computer){
+  
+  if (guest == 'rock' && computer == 'scissors'){
+     alert("guest wins");
+  }else if ( guest == 'rock' && computer == 'rock'){
+    alert("it's a tie");
+  }else if (guest == 'rock' && computer == 'paper'){
+    alert('computer wins');
+  }else if (guest == 'scissors' && computer == 'scissors'){
+    alert("it's a tie")
+  }else if (guest == 'scissors' && computer == 'rock'){
+    alert("computer wins")
+  }else if (guest == 'scissors' && computer == 'paper'){
+    alert("guest win")
+  }else if (guest == 'paper' && computer == 'paper'){
+    alert("it's a tie")
+  }else if (guest == 'paper' && computer == 'rock'){
+    alert("guest wins")
+  }else if (guest == 'paper' && computer == 'scissors'){
+    alert("computer wins")
+  }else {
+    alert('please unter a valid answer')
+  }
+}
+let game = decide_winer(guest, computer)
+}
+/* now that we got if statement and tryed if they work corectly we need 
+to ma the game go for five rounds*/
+/* we need to get each round alone where all of our previous functions work.
+then work again in the other round*/
+
+
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+   
+
+	</script>
+    
+    
+</body>
+</html
